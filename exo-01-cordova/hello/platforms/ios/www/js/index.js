@@ -20,6 +20,7 @@ var app = {
     // Application Constructor
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+    
     },
 
     // deviceready Event Handler
@@ -28,6 +29,7 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
+        document.getElementById('timestamp').innerHTML = new Date();
     },
 
     // Update DOM on a Received Event
@@ -41,6 +43,7 @@ var app = {
 
         console.log('Received Event: ' + id);
     }
+    
 };
 
 app.initialize();
